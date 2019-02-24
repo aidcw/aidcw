@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/Estatutos_sociales.jpg' %}"
+                style="width:1140px" />
+        </div>
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>ESTATUTOS SOCIALES</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            AID CHILDREN OF THE WORLD es una ONG registrada oficialmente en el Registro Nacional de Asociaciones del
+            Ministerio del Interior de España (Grupo 1, Sección 1, número nacional 590456), con Número de Identificación
+            Fiscal G-92.934.215, rigiéndose por los Estatutos Sociales que se adjuntan a continuación.
+            Igualmente se encuentra inscrita en el Registro Municipal de Asociaciones y Entidades del Excmo.
+            Ayuntamiento de Málaga, con número de registro nº2263.
+        </p>
+        {% for estatuto in estatuto %}
+        <p>
+            <a href="{{estatuto.documento.url}}" target="_blank">
+                <span class="glyphicon-download"></span>
+                <strong>Descargar Estatutos de la Asociación AID CHILDREN OF THE WORLD en formato PDF</strong>
+            </a>
+        </p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

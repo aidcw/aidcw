@@ -1,0 +1,76 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/directiva/junta_directiva.jpg' %}"
+                style="width:1140px" />
+        </div>
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>JUNTA DIRECTIVA</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            La actual Junta Directiva de AID CHILDREN OF THE WORLD la componen:
+        </p>
+    </div>
+    <div class="col-md-4">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/directiva/Presidente_JoseSarriaCuevas.jpg' %}"
+                style="width:300px" />
+        </div>
+        <p class="centrar separacionFila"><strong>PRESIDENTE: José Sarria</strong></p>
+    </div>
+    <div class="col-md-4">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen"
+                src="{% static 'core/img/directiva/Vicepresidente_DavidSanchezGarrido.jpg' %}" style="width:300px" />
+        </div>
+        <p class="centrar separacionFila"><strong>VICEPRESIDENTE: David Sánchez</strong></p>
+    </div>
+    <div class="col-md-4">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen"
+                src="{% static 'core/img/directiva/Secretaria_HerminiaRosaAznarteMoya.jpg' %}" style="width:300px" />
+        </div>
+        <p class="centrar separacionFila"><strong>SECRETARIA: Herminia Rosa Aznarte</strong></p>
+    </div>
+    <div class="col-md-4">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/directiva/Tesorero_LuisSandinoDaban.jpg' %}"
+                style="width:300px" />
+        </div>
+        <p class="centrar separacionFila"><strong>TESORERO: Luis Sandino</strong></p>
+    </div>
+    <div class="col-md-4">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen"
+                src="{% static 'core/img/directiva/Vocal_MdelCarmenLopezBenali.jpg' %}" style="width:300px" />
+        </div>
+        <p class="centrar separacionFila"><strong>VOCAL: María del Carmen López</strong></p>
+    </div>
+    <div class="col-md-4">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen"
+                src="{% static 'core/img/directiva/Vocal_LaurCruzRomero.jpg' %}" style="width:300px" />
+        </div>
+        <p class="centrar separacionFila"><strong>VOCAL: Laura Cruz</strong></p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+<div class="row separacionFila">
+    {% for noticia in noticia %}
+    <div class="col-md-3">
+        <div class="divCajaNoticias">
+            <div class="contenedorImagen">
+                <img class="fondoContenedorImagen centrarImagenNoticias" src="{{noticia.imagen.url}}" />
+            </div>
+            <p>
+                <div class="contenedorImagen">
+                    <img class="fondoContenedorImagen" src="{% static 'core/img/simbolo_noticias.jpg' %}"
+                        style="width:30px" />
+                    <small>{{noticia.localizacion|title}}</small>
+                </div>
+            </p>
+            <p class="juntarFecha"><small>{{noticia.fecha_noticia|date:"SHORT_DATE_FORMAT"}}</small></p>
+            <p><strong>{{noticia.titulo|slice:":30"|upper}}</strong></p>
+            <!-- <p>{{noticia.descripcion|slice:":100"|safe}}</p> -->
+            <small><a href="{% url 'publicacion' noticia.id %}">Leer más</a></small>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

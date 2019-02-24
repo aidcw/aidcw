@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+{% for hemeroteca in hemeroteca %}
+<div class="row separacionHemeroteca">
+ 
+    <div class="col-md-6">
+        <div class="col-md-12 centrarObjeto">
+            <p><strong>PROYECTOS {{hemeroteca.fecha|date:"Y"}}</strong></p>
+            <span class="letraNaranja"><strong>{{hemeroteca.titulo}}</strong></span>
+            <p>{{hemeroteca.descripcion|safe}}</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="carousel-item active">
+            <img src="{{hemeroteca.imagen.url}}" class="fondoContenedorImagen" alt="...">
+        </div>
+
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

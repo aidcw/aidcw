@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/Socio.jpg' %}" style="width:1140px" />
+        </div>
+        <div class="row separacionFila">
+                <div class="col-md-4">
+                    <hr class="hrEvento" />
+                </div>
+                <div class="col-md-4 centrar centrarObjeto">
+                    <span class="letraNaranja"><strong>TRABAJA COMO COLABORADOR</strong></span>
+
+                </div>
+                <div class="col-md-4">
+                    <hr class="hrEvento" />
+                </div>
+        </div>
+        <p>
+            Las personas o entidades colaboradoras son aquellas que con carácter puntual o excepcional colaboran con la
+            ONG en trabajos concretos, dando apoyo y cobertura al desarrollo de proyectos de ayuda o desarrollo
+            específicos. Su vinculación con AID CHILDREN OF THE WORLD es parcial y no permanente en el tiempo.
+
+            Esta ayuda puede ser mediante la participación en acciones concretas, mediante la difusión de las
+            actividades de la ONG o mediante donaciones específicas.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

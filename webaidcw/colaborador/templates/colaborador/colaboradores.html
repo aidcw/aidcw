@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/Colaborador.jpg' %}" style="width:1140px" />
+        </div>
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>ENTIDADES COLABORADORAS</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            Desde AID CHILDREN OF THE WORLD queremos reconocer a aquellas empresas, asociaciones, colectivos y personas
+            que han creído en esta posibilidad de cambio y que vienen colaborando con nuestra organización. Con estas
+            breves palabras queremos deciros MUCHAS GRACIAS POR VUESTRA GENEROSIDAD en nombre de todos los niños,
+            adolescentes, mujeres y hombres que han sido destinatarios de vuestra generosidad:
+
+        </p>
+    </div>
+    <div class="row">
+        {% for colaborador in colaborador reversed %}
+
+        <div class="col-md-3">
+            <div class="cajaColaboradores centrar">
+                <div class="contenedorImagen">
+                    <img class="fondoContenedorImagen" {% if colaborador.imagen %} src="{{colaborador.imagen.url}}"
+                        {% endif %} />
+                </div>
+                <p><strong>{{colaborador.nombre}}</strong></p>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+<div class="row">
+    {% for publicacion in publicacion %}
+    <div class="col-md-6">
+        <div class="col-md-12 centrarObjeto">
+            <span class="letraNaranja"><strong>{{publicacion.titulo|upper}}</strong></span>
+            <p>
+                <div class="contenedorImagen">
+                    <img class="fondoContenedorImagen" src="{% static 'core/img/simbolo_noticias.jpg' %}"
+                        style="width:30px" />
+                    <small>{{publicacion.localizacion|title}}</small>
+                </div>
+            </p>
+            <p class="juntarFecha"><small>{{publicacion.fecha_noticia|date:"SHORT_DATE_FORMAT"}}</small></p>
+            <p>{{publicacion.descripcion|safe}}</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="carousel-item active">
+            <img src="{{publicacion.imagen.url}}" class="fondoContenedorImagen" alt="...">
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

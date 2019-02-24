@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AIDCW</title>
+
+
+    <!--CARGA ESTATICOS PARA DESARROLLO-->
+    {% load static %}
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <!--  <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'core/personalizado/generica.css' %}" rel="stylesheet">
+
+
+    <!--CARGA ESTILOS-->
+    <!--     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="personalizado/generica.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <!--BASE-->
+    <!--BARRA DE NAVEGACION-->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'inicio' %}"> <img src="{% static 'core/img/logo_aidcw.jpg' %}"
+                    width="120" height="" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item {% if request.path == '/hemeroteca/' %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'hemeroteca' %}">Hemeroteca</a>
+                    </li>
+                    <li class="nav-item {% if request.path == '/noticias/' %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
+                    </li>
+                    <li class="nav-item {% if request.path == '/contacto/' %} active {% endif %}">
+                        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                    </li>
+                    <li class="nav-item {% if request.path == '/ayudar/' %} active {% endif %}">
+                        <a class="nav-link" id="btnDonar" href="{% url 'donacion' %}">Hacer una donación</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item {% if request.path == '/' %} active {% endif %}">
+                        <a class="nav-link quitarSubrayar" href="{% url 'inicio' %}"><strong>INICIO</strong><span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown {% if request.path == '/acercade/' %} active {% endif %}">
+                        <a class="nav-link dropdown-toggle quitarSubrayar" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>QUIÉNES SOMOS</strong>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'identidad' %}">Identidad Social</a>
+                            <a class="dropdown-item" href="{% url 'directiva' %}">Junta Directiva</a>
+                            <a class="dropdown-item" href="{% url 'estatutos' %}">Estatutos Sociales</a>
+                            <a class="dropdown-item" href="{% url 'gestion' %}">Gestión Transparente</a>
+                        </div>
+                    </li>
+                    <li class="nav-item {% if request.path == '/principios/' %} active {% endif %}">
+                        <a class="nav-link quitarSubrayar" href="{% url 'principios' %}"><strong>NUESTROS
+                                PRINCIPIOS</strong></a>
+                    </li>
+                    <li class="nav-item dropdown {% if request.path == '/ayudar/' %} active {% endif %}">
+                        <a class="nav-link dropdown-toggle quitarSubrayar" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>AYUDAR A AIDCW</strong>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'asociado' %}">Trabaja como socio</a>
+                            <a class="dropdown-item" href="{% url 'colaborador' %}">Trabaja como colaborador</a>
+                            <a class="dropdown-item" href="{% url 'donacion' %}">Hacer una donación</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item {% if request.path == '/colaboradores/' %} active {% endif %}">
+                        <a class="nav-link quitarSubrayar"
+                            href="{% url 'colaboradores' %}"><strong>COLABORADORES</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr class="hrEvento" />
+
+    <!--CONTENIDO-->
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+    <!--PIEDEPAGINA-->
+
+    <div>
+        <footer class="separacionFila cajaFooter">
+            <hr />
+            <div class="container">
+                <div class="row centrar">
+                    <div class="col-md-2">
+                        <a class="navbar-brand" href="{% url 'inicio' %}"> <img
+                                src="{% static 'core/img/logo_aidcw.jpg' %}" width="120" height="" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="footerTitulo">Quienes somos</p>
+                        <p><a href="{% url 'identidad' %}">Identidad Social</a></p>
+                        <p><a href="{% url 'directiva' %}">Junta Directiva</a></p>
+                        <p><a href="{% url 'estatutos' %}">Estatutos Sociales</a></p>
+                        <p><a href="{% url 'gestion' %}">Gestión transparente</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="footerTitulo">Nuestros principios</p>
+                        <p><a href="{% url 'principios' %}">Objetivos AIDCW</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="footerTitulo">Noticias</p>
+                        <p><a href="{% url 'noticias' %}">Actualidad</a></p>
+                        <!-- <p>Eventos <span class="fechaActual"></span></p>
+                        <p>Eventos <span class="fechaAnterior"></span></p> -->
+                        <p><a href="{% url 'hemeroteca' %}">Hemeroteca</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="footerTitulo">Ayudar a AIDCW</p>
+                        <p><a href="{% url 'asociado' %}">Trabaja como socio</a></p>
+                        <p><a href="{% url 'colaborador' %}">Trabaja como colaborador</a></p>
+                        <p><a href="{% url 'donacion' %}">Hacer una donación</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="footerTitulo">Contacta</p>
+                        <p><a href="{% url 'contacto' %}">Contáctanos</a></p>
+                        <p><a href="https://www.facebook.com/pages/category/Nonprofit-Organization/ONG-AID-CHILDREN-OF-THE-WORLD-285376345922/"
+                                target="_blank">Únete</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer class="colorNaranja cajaFooterbaja">
+            <div class="container letraBlanca">
+                <div class="row">
+                    <div class="col-md-12 centrar">
+                        <p>AID CHILDREN OF THE WORLD <span class="vl"></span>
+                            Bulevard Louis Pasteur, 5, Oficina 321 - 29010-Málaga - España <span class="vl"></span>
+                            info@aidcw.org <span class="vl"></span>
+                            952 10 90 22 - 639 21 11 49
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--CARGA ESTATICOS PARA DESARROLLO-->
+    <!-- Bootstrap y Javascripts -->
+    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Bootstrap y Javascripts -->
+    <!--     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <!--Sacamos la fecha de este año y del anterior para mostrarlo en eventos los dos últimos años -->
+    <!-- 
+    <script>
+        var ano = (new Date).getFullYear();
+        $(document).ready(function () {
+            $(".fechaActual").text(ano);
+            $(".fechaAnterior").text(ano-1);
+        });
+    </script> -->
+</body>
+
+</html>

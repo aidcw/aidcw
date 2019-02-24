@@ -1,0 +1,117 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/Gestion_transparente.jpg' %}" />
+        </div>
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>CÓMO NOS FINANCIAMOS</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            El principio irrenunciable, en cuanto a su operativa de trabajo, por parte de AID CHILDREN OF THE WORLD es
+            la transparencia. Para ello, cualquier persona (ya sea asociado o no de la ONG) tiene acceso a las cuentas y
+            memorias de la asociación.
+
+            Igualmente, en AID CHILDREN OF THE WORLD creemos en las mujeres y en los hombres, en sus capacidades y en la
+            posibilidad de transformación del mundo desde el sentimiento de solidaridad que las personas abrigan en su
+            corazón. Nosotros hemos creído que el cambio es posible gracias a la capacidad de compartir.
+
+            Desde estos principios, la financiación de los proyectos que AID CHILDREN OF THE WORLD lleva a cabo se hace
+            con las aportaciones (materiales o económicas) que empresas, asociaciones, colectivos y particulares
+            destinan a la entidad.
+        </p>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>ORIGEN DE LOS RECURSOS</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            Actualmente la totalidad de los recursos de AID CHILDREN OF THE WORLD tienen su origen en donaciones de
+            personas, empresas, organismos e instituciones de carácter privado, no contribuyendo (hasta el ejercicio
+            2009) ninguna Administración Pública al desarrollo de sus proyectos.
+
+            AID CHILDREN OF THE WORLD manifiesta su vocación de entidad independiente en la acción de la Cooperación
+            Internacional.
+
+        </p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>APLICACIÓN DE LOS RECURSOS</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            La aplicación de TODOS los recursos actuales que AID CHILDREN OF THE WORLD recibe se destinan al desarrollo
+            de sus proyectos en Marruecos (Zinat, Agla, Tetuán y Larache).
+
+            Actualmente no existe ningún gasto de gestión o administración en nuestra ONG, por lo que el 100% de los
+            recursos y donaciones recibidas se destinan a los fines y objetivos de la entidad.
+
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>MEMORIAS ANUALES</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            Aquí podrás descargarte todas las memorias y estados de cuentas anuales.
+        </p>
+        {% for memoria in memoria %}
+        <a href="{{ memoria.docuemento.url }}" target="_blank">
+            <button type="button" class="btn btn-default btn-circle btn-xl">
+                {{memoria.fecha_memoria|date:"Y"}}
+            </button>
+        </a>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

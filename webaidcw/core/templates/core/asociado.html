@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/ser_socio.jpg' %}" style="width:1140px" />
+        </div>
+        <p><a name="socio_1"></a></p>
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja"><strong>TRABAJA COMO ASOCIADO</strong></span>
+
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+
+        </div>
+        <p>
+            Trabajar para participar en la transformación del mundo es posible. El socio activo-cooperante es aquella
+            persona que ha optado por comprometerse de forma activa con la ONG, participando en una determinada área de
+            actividad de la misma llevando a cabo, personal y directamente, con medios propios o cedidos por la
+            organización, al menos cada dos años, los fines sociales de esta en cualquier lugar del mundo.
+
+
+            Igualmente el asociado colabora activamente (sin remuneración de ningún tipo) al desarrollo del conjunto de
+            los proyectos de AID CHILDREN OF THE WORLD.
+
+
+            Como asociado no existen aportaciones económicas obligatorias de ningún tipo.
+
+        </p>
+    </div>
+</div>
+
+{% endblock %}

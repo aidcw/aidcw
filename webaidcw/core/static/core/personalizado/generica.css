@@ -1,0 +1,358 @@
+﻿
+.nav_derecha{
+    align-items: flex-end
+}
+
+.derecha{
+    text-align: right
+}
+
+.navbar-nav > .nav-item{
+    margin-right: 20px;
+    margin-left: 20px; 
+}
+.navbar-nav > .nav-item:hover{
+    background-color: #FFFFFF
+}
+
+
+/*PARA LA DOBLE BARRA*/
+.navbar {
+    padding:0rem;
+  }
+  
+  .dropdown .dropdown-menu {
+    border-radius:0;
+   }
+  
+  
+  /* Medium devices (tablets, 768px and up) 
+  The navbar toggle appears at this breakpoint */
+  @media (min-width: 768px) {  
+  .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    border-radius:0;
+   }
+  }
+  
+  @media (min-width: 768px) and (max-width:998px){
+    .cajaFooter {
+        padding-top: 15px;
+        margin-top: 20%;
+        line-height: 140px;;
+        font-size: 13px;
+    }
+  }
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+@media (min-width: 992px) {
+    .seccionSuperior {
+        text-align: center;
+    }
+
+    .seccionInferior {
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    .navbar-nav > li > #enlaceFacebook {
+        padding-top: 12px;
+        padding-bottom: 0px;
+        line-height: 28px; /*M*/
+        width: 200px;
+    }
+
+}
+
+.divGris {
+    background-color: #F5F5F5;
+}
+
+.frase{
+    margin: 10px;
+}
+
+.divCajaNoticias {
+    background-color: #F5F5F5;
+    padding: 10px;
+    margin:10px; 
+}
+
+.cajaColaboradores {
+    padding: 10px;
+}
+
+.anchuraTotal {
+    width: 100%
+}
+
+/*Colores*/
+.colorPrincipal {
+    background-color: #049389;
+}
+
+.letraPrincipal{
+    color: #049389;
+}
+
+.colorNegro {
+    background-color: black
+}
+
+.colorBlanco {
+    background-color: white
+}
+
+.colorNaranja {
+    background-color: #EE8661;
+}
+
+.letraNegra {
+    color: black;
+}
+
+.letraBlanca {
+    color: white;
+}
+
+.letraNaranja {
+    color: #EE8661;
+}
+
+/*Para cuadrar imágenes*/
+.contenedorImagen {
+    max-width: 100%;
+}
+
+.fondoContenedorImagen {
+    max-width: 100%;
+    height: auto;
+}
+
+.juntarFecha{
+    line-height: 2px;
+}
+
+/*Para separaciones entre objetos*/
+body {
+    margin-top: 0;
+}
+
+.separacionFila {
+    margin-top: 2%;
+}
+
+.separacionHemeroteca{
+    margin-top: 4%;
+}
+
+.separacionEvento{
+    margin-top: 4%;
+}
+div div hr{
+    margin-bottom: 15%;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.izquierda {
+    text-align: left;
+}
+
+.derecha {
+    text-align: right;
+}
+
+/*Enlaces*/
+.quitarSubrayar {
+    text-decoration: none;
+}
+
+.quitarSubrayar:hover,
+.quitarSubrayar:active,
+.quitarSubrayar:visited {
+    text-decoration: none;
+    color: #EE8661;
+}
+
+.enlaceBlanco:hover,
+.enlaceBlanco:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black
+}
+
+.botonQuiero {
+    padding: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+/*.botonQuiero:hover,.botonQuiero:focus {
+    color:black;
+    background-color: orangered;
+    }*/
+
+/*COLORES*/
+/*COLOR HACER UNA DONACIÓN*/
+#btnDonar {
+    color: #EE8661;
+    font-weight: bold;
+}
+
+#botonSocio {
+    background-color: #F8C4B1;
+}
+
+    #botonSocio:hover, #botonColaborador:hover, #botonDonar:hover {
+        background-color: orangered;
+    }
+
+#botonColaborador {
+    background-color: #F5AD94;
+}
+
+#botonDonar {
+    background-color: #EE8661;
+}
+
+#botonContactarFooter{
+    padding:10px;
+    text-align:center;
+    border: 1px solid;
+}
+
+#botonContactarFooter:hover {
+        background-color: orangered;
+    }
+        /*ELEMENTOS*/
+        /*BARRA PRÓXIMOS EVENTOS*/
+.hrEvento {
+    background-color: #EE8661;
+    width: 100%;
+    height: 3px;
+}
+
+/*BARRA DE TITULO LAYOUT*/
+/*TAMAÑO DE CAJA DE SECCIONES*/
+.seccionSuperior {
+    text-align: center;
+}
+
+.seccionInferior {
+    text-align: center;
+    font-weight: bold;
+}
+
+.vl {
+    border-left: 3px solid #FFFFFF;
+    height: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+#lineaSeparacionMenu {
+    width: 100%;
+    border: 2px solid orange;
+    margin: 0px;
+}
+
+.letraQuiero {
+    margin-top: 5%; 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footerTitulo{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cajaFooter {
+    padding-top: 15px;
+    margin-top: 10%;
+    line-height: 10px;;
+    font-size: 13px;
+}
+.cajaFooterbaja{
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.btn-circle.btn-xl {
+    width: 100px;
+    height: 100px;
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-size: 24px;
+    line-height: 1.33;
+    border: 2px solid;
+    color: #EE8661;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+    margin: 10px;
+}
+
+
+.leerMas {
+    color: #0989B0;
+    cursor: pointer;
+}
+.leerMas:hover {
+        font-weight:bold;
+        color: #0989B0;
+    }
+
+.centrarImagenNoticias{
+    height:150px;
+}
+
+.nav > li > #enlaceFacebook{
+    padding-left:172px;
+}
+.nav > li > #enlaceFacebook:hover,
+.nav > li > #enlaceFacebook:focus {
+    text-decoration: none;
+    background-color: white;
+    /*esto quiere decir que, cuando encuentre un .nav y dentro un li y ese tenga el id X va a efectuarse*/
+}
+
+.glyphicon-chevron-left:hover{
+    background-color:white;
+}

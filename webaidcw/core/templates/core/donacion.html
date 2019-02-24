@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/hacer_donacion.jpg' %}" style="width:1140px" />
+        </div>
+        <div class="row separacionFila">
+                <div class="col-md-4">
+                    <hr class="hrEvento" />
+                </div>
+                <div class="col-md-4 centrar centrarObjeto">
+                    <span class="letraNaranja"><strong>DONACIONES</strong></span>
+                </div>
+                <div class="col-md-4">
+                    <hr class="hrEvento" />
+                </div>
+        </div>
+        <p>
+            El principio general de desarrollo de proyectos de AID CHILDREN OF THE WORLD es la no existencia de cuotas
+            de asociados ni donaciones periódicas permanentes. El principio de gestión se basa en AYUDAS CONCRETAS PARA
+            PROYECTOS CONCRETOS.
+        </p>
+        <p>
+            Haciendo un donativo (que puede ser en medios económicos o materiales) a AID CHILDREN OF THE WORLD puedes
+            colaborar, de forma excepcional, en el proceso de gestión de cualquiera de los proyectos que se están
+            llevando a cabo, con el fin de colaborar en posibilitar su desarrollo (contratación de medios de transporte,
+            adquisición de materiales específicos: material didáctico, sanitario, higiénico, etc.) o adquisición de
+            medios para el desarrollo de proyectos en destino.
+        </p>
+        <p>
+            Las donaciones materiales se pueden efectuar en la sede de la entidad. Las donaciones económicas se pueden
+            realizar en la cuenta de la asociación.
+
+        </p>
+        <p>
+            TOMA NOTA DE NUESTRO NÚMERO DE CUENTA:
+        </p>
+        <p>
+            <strong>Unicaja: ES32 2103 / 3050 / 08 / 0030030219</strong>
+
+        </p>
+    </div>
+</div>
+
+{% endblock %}

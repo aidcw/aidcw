@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Necesario para cargar las imagenes static-->
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="contenedorImagen centrar">
+            <img class="fondoContenedorImagen" src="{% static 'core/img/Identidad_social.jpg' %}" style="width:1140px"/>
+        </div>
+        <div class="row separacionFila">
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+            <div class="col-md-4 centrar centrarObjeto">
+                <span class="letraNaranja negrita"><strong>IDENTIDAD SOCIAL</strong></span>
+            </div>
+            <div class="col-md-4">
+                <hr class="hrEvento" />
+            </div>
+        </div>
+        <p>
+            AID CHILDREN OF THE WORLD es una ONG (organización no gubernamental) independiente de otras organizaciones religiosas, políticas, sociales o sindicales. El conjunto de sus miembros responde al ideal cívico-humanista (en su más amplio sentido) fundamentado en la filosofía de la acción.
+
+            El equipo de voluntarios de AID CHILDREN OF THE WORLD trabaja, principalmente, desde España, aunque el ámbito de actuación de la ONG es de carácter internacional, comprometiéndose con la ayuda y el desarrollo (como fórmulas de transformación de las sociedades más desfavorecidas) destinados, especialmente, al colectivo de niños y adolescentes, y al de las mujeres.
+
+
+            El objetivo final de AID CHILDREN OF THE WORLD es la mejora de las condiciones de vida de las regiones más necesitadas del mundo y de sus habitantes.
+
+        </p>
+    </div>
+</div>
+
+
+{% endblock %}
