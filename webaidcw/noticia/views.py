@@ -11,7 +11,7 @@ def noticia(request):
 
 
 def noticia_unica(request, noticia_id):
-    publi = get_object_or_404(Noticia, id=noticia_id)
-    publicacion = Noticia.objects.filter(id=publi.id)
+    """ publi = get_object_or_404(Noticia, id=noticia_id) """
+    publicacion = Noticia.objects.filter(id=noticia_id)
     return render(request, "noticia/publicacion.html", {'publicacion': publicacion})
 

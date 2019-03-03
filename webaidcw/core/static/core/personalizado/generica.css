@@ -170,8 +170,8 @@ body {
 .separacionEvento{
     margin-top: 4%;
 }
-div div hr{
-    margin-bottom: 15%;
+.p_hr {
+    margin-top: 7%px;
 }
 
 .centrar {

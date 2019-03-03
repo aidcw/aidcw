@@ -37,3 +37,9 @@ if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+
+
+#CUSTOM TITLES FOR ADMIN
+admin.site.site_header = "Administrar AIDCW"
+admin.site.index_title = "Panel de administrador"
+admin.site.site_title = "AIDCW"
